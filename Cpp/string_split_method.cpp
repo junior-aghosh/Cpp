@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 
-    string sentence = "I am ankur ghosh";
+    string sentence = "Hello this program splits the string";
     string word = "";
 
     for(char& c:sentence){
