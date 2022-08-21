@@ -14,17 +14,15 @@ superDigit(8) = 8
 */
 
 int super_digit(string &n, int &k){
-    //string p="";
+
     int one = 1;
-    int sum=0;
-    //while(k--){              // multiplying n * k = p
-    //    p=p.append(n);       // p becomes exponentially huge with the large limits so looping and sum over p becomes slow       
-    //}                       // easier way is to sum the digits first and then multiply k
+    long long sum=0;      // 1st sum becomes large therefore use long long
+
     if (n.length()==1){      // recursion break statemet
         return stoi(n);
     }
     else{
-        for(char &character:n){     // ranged based loop of characters on string  -- changed to n
+        for(char &character:n){     // ranged based loop of characters on string  
         sum += int(character)-48;   // calculating digit sum of p
         }
         string sums = to_string(sum * k);   //multiplying with k
