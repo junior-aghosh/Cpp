@@ -1,7 +1,14 @@
 #include<iostream>
+#include<algorithm>
 #include<vector>
 using namespace std;
 
+void print(vector<int> &temp){
+    cout << "size: " << temp.size() << " capacity: " << temp.capacity() << endl;
+    for(auto element:temp){
+        cout << element << " ";
+    }
+}
 int main(){
 
     vector<int> numbers = {1,2,3,4,5};
@@ -33,6 +40,17 @@ int main(){
     cout << endl << v1[0] << " " << v1[1] << " " << v1[2];
     v1.erase(v1.begin());
     cout << endl << v1[0];
+
+    //find() and erase()
+
+    vector<int> num{1,2,3,4,5,6,7};
+    print(num);
+    num.erase(num.begin()+1);
+    print(num);
+    num.erase(find(num.begin(),num.end(), 5));
+    print(num);
+
+
 
     
 
