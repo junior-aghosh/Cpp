@@ -32,7 +32,7 @@ int main()
     {
         vector<int> temp;
         //dynamic.push_back(vector<int> ())
-        for (int j = 0; j < 5; j++)
+        for (int j = 0; j < column; j++)
         {
             temp.push_back(j);
             //dynamic[i].push_back(j)        }
